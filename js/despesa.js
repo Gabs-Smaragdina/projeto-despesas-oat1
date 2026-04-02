@@ -1,0 +1,22 @@
+
+export class Despesa{
+
+    constructor(ano, mes, dia, tipo, descricao, valor){
+        this.ano = ano
+        this.mes = mes
+        this.dia = dia
+        this.tipo = tipo
+        this.descricao = descricao
+        this.valor = valor
+        
+    }
+
+    validarDados(){
+        for(let i in this){
+            if(this[i]=='' || this[i]==undefined || this[i]==null){
+                return false
+            }
+        }
+        return true
+    }
+}
